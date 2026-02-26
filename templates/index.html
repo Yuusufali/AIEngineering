@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Главная — Mini AI{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="header">
+    <h1>Mini AI</h1>
+    <form class="inline" method="post" action="{{ url_for('logout') }}">
+      <button type="submit" class="btn btn-ghost">Выйти</button>
+    </form>
+  </div>
+  <p>Добро пожаловать, <strong>{{ user.username }}</strong>!</p>
+  <p style="color: #a9b1d6; font-size: 0.95rem;">
+    Подключение к БД активно. Авторизация выполнена.<br>
+    Здесь можно добавить функции AI и другие разделы.
+  </p>
+</div>
+{% endblock %}
